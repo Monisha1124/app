@@ -9,9 +9,10 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running Basic Python Application...'
-                // For Linux/Mac Jenkins server use sh. If Windows Jenkins server, use bat 'python app.py' instead
-                sh 'python3 app.py'
+                // Using 'bat' for Windows environment execution
+                bat 'python app.py'
             }
         }
     }
 }
+
